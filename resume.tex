@@ -1,0 +1,217 @@
+%!TEX program = xelatex
+% ============================================================
+%  David Xchel Morales Hurtado -- CV
+%  Modern, ATS-friendly, single-source LaTeX resume
+% ============================================================
+\documentclass[10.5pt,a4paper]{article}
+
+% ---------- Fonts & Encoding ----------
+\usepackage{fontspec}
+\setmainfont{Carlito}
+
+% ---------- Layout ----------
+\usepackage[
+  top=1.15cm,
+  bottom=1.15cm,
+  left=1.6cm,
+  right=1.6cm
+]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\raggedright
+
+% ---------- Color ----------
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{0B3D5C}   % deep navy-teal
+\definecolor{accent2}{HTML}{2E7D6B}  % muted teal for rules
+\definecolor{darkgray}{HTML}{2B2B2B}
+\definecolor{midgray}{HTML}{555555}
+\color{darkgray}
+
+% ---------- Sections ----------
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-4pt}{\color{accent2}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{darkgray}}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+
+% ---------- Lists ----------
+\usepackage{enumitem}
+\setlist[itemize]{
+  leftmargin=1.15em,
+  topsep=1pt,
+  itemsep=1pt,
+  parsep=0pt,
+  label={\small\textbullet}
+}
+
+% ---------- Misc ----------
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdftitle={David Xchel Morales Hurtado - CV},
+  pdfauthor={David Xchel Morales Hurtado}
+}
+\newcommand{\entryheader}[3]{%
+  {\large\bfseries\color{darkgray} #1} \hfill {\small\color{midgray}\itshape #3}\\[1pt]
+  {\bfseries\color{accent2} #2}\par\vspace{2pt}
+}
+
+\newcommand{\smallmeta}[1]{{\small\color{midgray} #1}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ============================================================
+% HEADER
+% ============================================================
+\begin{center}
+  {\fontsize{26}{28}\selectfont\bfseries\color{accent} David Xchel Morales Hurtado}\\[4pt]
+  {\large\color{midgray} Software Engineer --- Automation, Validation \& Infrastructure Tooling}\\[6pt]
+  \smallmeta{
+    Guadalajara, Mexico \; $\vert$ \;
+    \href{tel:+52 443 168 2336}{+52 443 168 2336} \; $\vert$ \;
+    \href{mailto:davidxchelmh@gmail.com}{davidxchelmh@gmail.com} \; $\vert$ \;
+    \href{https://linkedin.com/in/david-xchel-morales-hurtado}{LinkedIn} \; $\vert$ \;
+    \href{https://dxchel.github.io}{dxchel.github.io}
+  }
+\end{center}
+\vspace{-2pt}
+{\color{accent2}\rule{\linewidth}{1.3pt}}
+\vspace{4pt}
+
+% ============================================================
+% SUMMARY
+% ============================================================
+\section*{Professional Summary}
+\textbf{Software Engineer} with 5+ years of professional experience building automation, validation and infrastructure tooling on \textbf{Linux} platforms. Strong background in \textbf{C++}, \textbf{Python}, automation and large scale test frameworks. Experienced in \textbf{developing} reliable engineering solutions, \textbf{mentoring} and \textbf{collaborating} across \textbf{global organizations}. Passionate about \textbf{Open-Source} Software, \textbf{Mathematics} and continuous learning. Always aiming towards high \textbf{Quality} and \textbf{performance} with a \textbf{mentoring mindset} in favor of the continuous growth of the team.
+
+% ============================================================
+% SELECTED ACHIEVEMENTS
+% ============================================================
+\section*{Selected Achievements}
+\begin{itemize}
+  \item \textbf{Bronze Medalist} - Mexican Mathematics Olympiad (OMM).
+  \item \textbf{Reduced validation execution time} from \textbf{hours to minutes} by building \textbf{Python/Bash automation frameworks}.
+  \item \textbf{Improved testing efficiency by 50\%} across multiple processor validation programs.
+  \item \textbf{Served as technical mentor and onboarding lead} for incoming engineers.
+  \item \textbf{Active open-source contributor}: Fixed a \href{https://projects.blender.org/blender/blender/pulls/161439}{custom property type bug} in \href{https://www.blender.org/}{Blender}, resolved an \href{https://github.com/fmtlib/fmt/pull/4840}{overflow bug} in the \href{https://fmt.dev/}{fmt} library, removed a \href{https://github.com/godotengine/godot/pull/121253}{duplicate-buffer deletion} in the \href{https://godotengine.org/}{Godot Engine}, added a \href{https://github.com/ZigRazor/CXXGraph/pull/606}{large graph cycle detection test} to \href{https://github.com/ZigRazor/CXXGraph/}{CXXGraph}, and extended the test base of the \href{https://unify.ai/}{UnifyAI} Python project.
+  \item Completed an \textbf{international academic exchange} at \textbf{Universiti Malaya}.
+\end{itemize}
+
+% ============================================================
+% EXPERIENCE
+% ============================================================
+\section*{Professional Experience}
+
+\entryheader{Oracle --- Guadalajara, Mexico}{Senior Software Reliability Developer}{Feb 2026 -- Present}
+Develop automation and \textbf{cloud}-management tooling in \textbf{Python}, \textbf{Java}, and \textbf{Bash} for Oracle Cloud Infrastructure regions.
+\begin{itemize}
+  \item Build and maintain automation workflows aimed at reducing manual effort, improving \textbf{reliability}, and \textbf{accelerating} cloud-region deployment activities.
+  \item Troubleshoot \textbf{Linux} systems and \textbf{cloud} infrastructure issues across production environments.
+  \item \textbf{Develop AI-assisted tooling} for information extraction, documentation, and operational support.
+  \item \textbf{Authored} technical workflows and onboarding material adopted across engineering teams.
+\end{itemize}
+
+\entryheader{Intel --- Guadalajara, Mexico}{Functional Validation Engineer}{Feb 2021 -- Feb 2026}
+Develop \textbf{Python} and \textbf{Bash} automation for the functional validation of next-generation processor architectures on \textbf{Linux}, collaborating with a \textbf{multicultural} and \textbf{diverse} globally distributed team.
+\begin{itemize}
+  \item Designed and maintained large-scale validation automation frameworks using \textbf{Python}, \textbf{Bash}, and \textbf{PyTest}.
+  \item \textbf{Reduced execution time} of manual workflows from hours to minutes through \textbf{automation}.
+  \item \textbf{Built} migration tooling that reduced project-porting effort \textbf{from one day to minutes}.
+  \item \textbf{Developed CI/CD} validation pipelines supporting multiple processor programs.
+  \item Acted as \textbf{technical lead} and primary \textbf{point of contact} across cross-functional teams.
+  \item \textbf{Mentored} new engineers on processor architecture, memory systems, and \textbf{Linux}-based development workflows.
+  \item Improved validation \textbf{efficiency by 50\%} through \textbf{optimized} test coverage and execution strategy.
+\end{itemize}
+
+% ============================================================
+% EDUCATION
+% ============================================================
+\section*{Education}
+
+\entryheader{Instituto Polit\'ecnico Nacional --- Mexico City}{B.Eng. in Mechatronics Engineering}{Aug 2015 -- Jan 2021}
+\textbf{Top-performing} student recognized for \textbf{effort}, \textbf{curiosity}, and \textbf{creativity}. Consistently focused on \textbf{teamwork} by \textbf{mediating} and \textbf{leading} to deliver quality projects efficiently.
+\begin{itemize}
+  \item \textbf{MIPS} processor implementation in \textbf{SystemVerilog} with a \textbf{UVM testbench} built using \textbf{Python} and \textbf{C++}.
+  \item \textbf{Python} projects: \textbf{Neural Networks}, \textbf{file/database processing}, \textbf{web scraping}, \textbf{Flask} applications with Selenium testing.
+  \item \textbf{Virtual reality} experiences developed in \textbf{Unity} and \textbf{Blender}.
+  \item Embedded systems and FPGA development projects.
+  \item Electronic circuit design and implementation.
+\end{itemize}
+
+\entryheader{Universiti Malaya --- Kuala Lumpur, Malaysia}{Academic Mobility / Exchange Program}{Feb 2019 -- Jun 2019}
+Learned from one of the most renowned universities in the world while acquiring experience by working, \textbf{communicating} and \textbf{leading} people with contrasting backgrounds and mindsets.
+\begin{itemize}
+  \item Built a line-following robot using \textbf{Raspberry Pi}.
+  \item Interactive \textbf{VR} world using \textbf{Unity}.
+  \item Developed a hand-tracking \textbf{AI} project.
+\end{itemize}
+
+% ============================================================
+% SKILLS
+% ============================================================
+\section*{Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\color{accent2}}m{3.1cm} X@{}}
+Languages & \textbf{Python}, \textbf{C++}, \textbf{Bash}, C, Java, JavaScript, TypeScript, LaTEX, Verilog, Assembly \\[8pt]
+Platforms & \textbf{Linux (Ubuntu, Debian, Arch)}, \textbf{Git/GitHub}, \textbf{Docker} \\[8pt]
+Engineering & \textbf{Agile}, \textbf{CI/CD}, \textbf{Automation}, \textbf{Test Frameworks}, \textbf{Mathematics}, AI-Assisted Development, Embedded Systems, Cloud Infrastructure \\[8pt]
+Professional & \textbf{Leadership}, \textbf{Mentoring}, \textbf{Technical Communication}, \textbf{Problem Solving} \\[8pt]
+Spoken Languages & \textbf{English (fluent)}, \textbf{Spanish (native)}, German (learning), French (learning) \\
+\end{tabularx}
+
+% ============================================================
+% PERSONAL PROJECTS
+% ============================================================
+\section*{Personal Projects}
+\begin{itemize}
+  \item \textbf{Modular C++ GUI application} (GTK4, webview, asio, GTest) --- Continuously evolving desktop app featuring an embedded browser, a multithreaded fractal viewer, and a coroutine-based LAN chat.
+  \item \textbf{Personal portfolio} --- \href{https://dxchel.github.io}{dxchel.github.io}, built with React and TypeScript.
+  \item \textbf{Arch Linux daily-driver setup} --- Self-customized system used to build deep, practical knowledge of Linux and its file system.
+\end{itemize}
+
+% ============================================================
+% COURSES & CERTIFICATIONS
+% ============================================================
+\section*{Courses \& Certifications}
+\begin{tabularx}{\linewidth}{@{} X >{\raggedleft\arraybackslash}p{4.1cm} @{}}
+\textbf{Advanced C++ Programming and Modern Practices --- Microsoft} & Feb 2026 -- May 2026 \\
+\textbf{Linux Essentials --- Linux Professional Institute} & Jan 2020 -- Apr 2020 \\
+\textbf{Advanced Python --- Universidad Marista} & Jun 2024 -- Nov 2024 \\
+Time Management Fundamentals & Feb 2026 -- Mar 2026 \\
+Foundations of Agile Project Management --- Google & Feb 2026 -- Mar 2026 \\
+Learning How to Learn --- Oakland University & Jan 2025 -- Jun 2025 \\
+Mobile App Development --- Google Activate & Nov 2019 -- Feb 2020 \\
+Intel x86 Processor \& Platform Architecture --- MindShare & Jan 2022 -- Jun 2022 \\
+\end{tabularx}
+
+% ============================================================
+% EXTRA-CURRICULAR ACTIVITIES
+% ============================================================
+\section*{Extra-Curricular Activities}
+\begin{tabularx}{\linewidth}{@{} X >{\raggedleft\arraybackslash}m{4.1cm} @{}}
+  \textbf{Mexican Mathematics Olympiad (OMM), Mexico City} \newline
+  --- Bronze award & Mar 2013 -- Nov 2014 \\
+  \textbf{Mexican Informatics Olympiad (COMI), Mexico City} \newline
+  --- Participation award & Jan -- May 2014 \\
+  Robot War Staff, IEEE University Branch, Mexico City\newline
+  --- Planning and organization staff & Jul 2018 -- Jul 2020 \\
+  Scout, Mexican Scout Association, Morelia\newline
+  --- Participation in altruism and teamwork-oriented activities & Jan 2014 -- Aug 2015 \\
+  Emergency Response Helper, ERUM, Mexico\newline
+  --- Provided relief support following the 2017 Mexico City earthquake & Sep -- Oct 2017 \\
+\end{tabularx}
+
+\end{document}
